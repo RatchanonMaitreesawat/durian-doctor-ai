@@ -1,6 +1,8 @@
 import os
 import torch
 import torch.nn as nn
+torch.set_num_threads(1)
+torch.set_grad_enabled(False)
 from torchvision import transforms, models
 from PIL import Image
 from flask import Flask, request, jsonify
